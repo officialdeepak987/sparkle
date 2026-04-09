@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar & Portfolio Slider</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Playfair Display for the Logo and services, Inter for the Navigation -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Fancybox CSS for Image Galleries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#e60023' // Custom red matching the "Home" link
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #000;
+            /* Removed overflow:hidden from here so we can scroll down to Our Services section */
+        }
+
+        /* Top gradient to ensure navbar readability */
+        .nav-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+        }
+
+        /* Smooth Vertical Sliding Animation for Portfolio */
+        .scrolling-wrapper {
+            display: flex;
+            flex-direction: column;
+            will-change: transform;
+        }
+
+        /* Different speeds for that off-sync masonry effect */
+        .scroll-normal { animation: scrollUp 15s linear infinite; }
+        .scroll-fast { animation: scrollUp 10s linear infinite; }
+        .scroll-slow { animation: scrollUp 15s linear infinite; }
+
+        .scrolling-wrapper:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); } 
+            /* Scrolls exactly halfway since the content is duplicated to loop perfectly */
+        }
+    </style>
+</head>
+<!-- Removed h-screen and overflow-hidden from body, shifted relative positioning so body can scroll naturally -->
+<body class="font-sans antialiased text-white m-0 p-0 bg-black">
+
+    <!-- Navbar Container -->
+    <header class="w-full absolute top-0 left-0 z-50 nav-overlay pb-6">
+        <div class="px-5 md:px-10 lg:px-16 py-5 md:py-6 flex items-start md:items-center justify-between w-full">
+            
+            <!-- Logo Section -->
+            <a href="#" class="shrink-0 hover:opacity-90 transition-opacity drop-shadow-lg w-32 md:w-48 lg:w-48">
+                <!-- Replace 'your-client-logo.png' with the actual path to your logo -->
+                <img src="/assest/logo/white_logo.png" alt="Studio Sabi Logo" class="w-full h-auto object-contain" />
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden flex-1 lg:flex items-center justify-end mr-6 lg:mr-10 space-x-6 xl:space-x-8 text-[14px] xl:text-[15px] font-semibold tracking-wide drop-shadow-md">
+                <a href="#" class="text-brand-red hover:text-red-500 transition-colors">Home</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Beauty</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Fashion Western</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Fashion India</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Male Fashion</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Celebrity</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Advertising</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Contact Us</a>
+            </nav>
+
+            <!-- Search Icon & Mobile Hamburger Menu -->
+            <div class="flex items-center shrink-0 mt-1 md:mt-0 drop-shadow-md">
+                <!-- Search -->
+                <button aria-label="Search" class="hidden md:block text-white hover:text-gray-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                </button>
+                
+                <!-- Hamburger Menu (Visible on smaller screens, matching the second image) -->
+                <button class="lg:hidden text-white ml-5 hover:text-gray-300" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 sm:w-8 sm:h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- Hero Section with Animated Portfolio Gallery Background -->
+    <section class="relative h-screen w-full bg-black overflow-hidden flex gap-1 sm:gap-2 justify-center items-start pt-[2px]">
+        
+        <!-- Column 1 (Visible on both Mobile and Desktop) -->
+        <div class="w-1/3 md:w-1/4 flex flex-col flex-shrink-0 scrolling-wrapper scroll-normal gap-1 sm:gap-2">
+            <!-- Set 1 -->
+            <img src="assest/clientimg/8D6A6281.JPG" alt="Fashion Portrait" class="w-full h-[300px] object-cover">
+            <img src="assest/clientimg/img1.jpg" alt="Beauty Close Up" class="w-full h-[450px] object-cover">
+            <img src="assest/clientimg/img21.JPG" alt="Celebrity Lighting" class="w-full h-[350px] object-cover">
+            <!-- Set 2 (Duplicated down exactly to create infinite scroll illusion) -->
+            <img src="assest/clientimg/img23.JPG" alt="Fashion Portrait" class="w-full h-[300px] object-cover">
+            <img src="assest/clientimg/img1.jpg" alt="Beauty Close Up" class="w-full h-[450px] object-cover">
+            <img src="assest/clientimg/8D6A6281.JPG" alt="Celebrity Lighting" class="w-full h-[350px] object-cover">
+        </div>
+
+        <!-- Column 2 (Visible on both Mobile and Desktop with delayed sync) -->
+        <div class="w-1/3 md:w-1/4 flex flex-col flex-shrink-0 scrolling-wrapper scroll-slow gap-1 sm:gap-2" style="animation-delay: -10s;">
+            <!-- Set 1 -->
+            <img src="assest/clientimg/img2.JPG" alt="Red Studio Light" class="w-full h-[400px] object-cover">
+            <img src="assest/clientimg/img4.JPG" alt="Black and White" class="w-full h-[350px] object-cover">
+            <img src="assest/clientimg/img6.JPG" alt="Fashion Shoot" class="w-full h-[450px] object-cover">
+            <img src="assest/clientimg/img24.JPG" alt="Profile Shot" class="w-full h-[250px] object-cover">
+            <!-- Set 2 -->
+            <img src="assest/clientimg/img2.JPG" alt="Red Studio Light" class="w-full h-[400px] object-cover">
+            <img src="assest/clientimg/img4.JPG" alt="Black and White" class="w-full h-[350px] object-cover">
+            <img src="assest/clientimg/img6.JPG" alt="Fashion Shoot" class="w-full h-[450px] object-cover">
+            <img src="assest/clientimg/img24.JPG" alt="Profile Shot" class="w-full h-[250px] object-cover">
+        </div>
+
+        <!-- Column 3 (Visible on both Mobile and Desktop) -->
+        <div class="w-1/3 md:w-1/4 flex flex-col flex-shrink-0 scrolling-wrapper scroll-fast gap-1 sm:gap-2" style="animation-delay: -5s;">
+            <!-- Set 1 -->
+            <img src="assest/clientimg/img10.JPG" alt="Color Gel Photo" class="w-full h-[320px] object-cover">
+            <img src="assest/clientimg/img11.JPG" alt="High Fashion" class="w-full h-[500px] object-cover">
+            <img src="assest/clientimg/img14.JPG" alt="Neon Look" class="w-full h-[350px] object-cover">
+            <!-- Set 2 -->
+            <img src="assest/clientimg/img10.JPG" alt="Color Gel Photo" class="w-full h-[320px] object-cover">
+            <img src="assest/clientimg/img11.JPG" alt="High Fashion" class="w-full h-[500px] object-cover">
+            <img src="assest/clientimg/img14.JPG" alt="Neon Look" class="w-full h-[350px] object-cover">
+        </div>
+
+        <!-- Column 4 (Hidden on narrow mobile screens so images remain nicely sized, visible on md and up) -->
+        <div class="hidden md:flex w-1/4 flex-col flex-shrink-0 scrolling-wrapper scroll-normal gap-1 sm:gap-2" style="animation-duration: 32s; animation-delay: -18s;">
+            <!-- Set 1 -->
+            <img src="assest/clientimg/img15.JPG" alt="Western Fashion" class="w-full h-[450px] object-cover">
+            <img src="/assest/clientimg/img25.JPG" alt="Model Portrait" class="w-full h-[300px] object-cover">
+            <img src="assest/clientimg/img11.jpg" alt="Editorial Fashion" class="w-full h-[400px] object-cover">
+            <!-- Set 2 -->
+            <img src="assest/clientimg/img15.JPG" alt="Western Fashion" class="w-full h-[450px] object-cover">
+            <img src="/assest/clientimg/img25.JPG" alt="Model Portrait" class="w-full h-[300px] object-cover">
+            <img src="assest/clientimg/8D6A6281.JPG" alt="Editorial Fashion" class="w-full h-[400px] object-cover">
+        </div>
+        
+          <!-- Background Logo/Image Watermark (Behind the portfolio grid) -->
+        <div class="pointer-events-none absolute inset-0 z-[-10] hidden md:flex items-center justify-center opacity-70">
+            <!-- Replace 'background-logo.png' with your desired background image/logo -->
+            <img src="/assest/logo/white_logo.png" alt="Background Logo Watermark" class="w-[60vw] h-auto object-contain drop-shadow-[0_4px_40px_rgba(0,0,0,0.8)]" />
+        </div>
+    </section>
+
+    <!-- NEW SECTION: OUR SERVICES -->
+    <section class="py-20 md:py-28 bg-white text-black px-6">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 tracking-wide text-gray-900">Our Valuable Clients</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-[15px] md:text-base leading-relaxed">
+                    Comprehensive photography and videography solutions to cover every aspect of your grand celebration.
+                </p>
+            </div>
+
+            <!-- Services Grid (Mobile: 1 col, Desktop: 3 cols) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- 1. Traditional Photography Card -->
+                <div>
+                    <!-- The visible thumbnail that opens the gallery -->
+                    <a href="assest/clientimg/img13.JPG" 
+                       data-fancybox="gallery-traditional" 
+                       data-caption="Traditional Wedding Decor"
+                       class="relative block h-[300px] md:h-[380px] rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-300">
+                        
+                        <img src="assest/clientimg/img13.JPG" 
+                             alt="Traditional Photography" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        
+                        <!-- Dark bottom gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Card Title -->
+                        <!-- <h3 class="absolute bottom-6 left-6 text-white font-serif text-2xl font-bold tracking-wide">Traditional <br>Photography</h3> -->
+                    </a>
+                    
+                    <!-- Hidden gallery images grouped under "gallery-traditional" -->
+                    <a href="assest/clientimg/img11.JPG" data-fancybox="gallery-traditional" data-caption="Wedding Setup Highlights" style="display:none;"></a>
+                    <a href="assest/clientimg/img9.JPG" data-fancybox="gallery-traditional" data-caption="Traditional Bride and Groom Moments" style="display:none;"></a>
+                </div>
+
+                <!-- 2. Candid Photography Card -->
+                <div>
+                    <!-- The visible thumbnail that opens the gallery -->
+                    <a href="assest/clientimg/img23.JPG" 
+                       data-fancybox="gallery-candid" 
+                       data-caption="Couples Candid Shots"
+                       class="relative block h-[300px] md:h-[380px] rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-300">
+                        
+                        <img src="assest/clientimg/img23.JPG" 
+                             alt="Candid Photography" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        
+                        <!-- Dark bottom gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Card Title -->
+                        <!-- <h3 class="absolute bottom-6 left-6 text-white font-serif text-2xl font-bold tracking-wide">Candid <br>Photography</h3> -->
+                    </a>
+                    
+                    <!-- Hidden gallery images grouped under "gallery-candid" -->
+                    <a href="assest/clientimg/img16.JPG" data-fancybox="gallery-candid" data-caption="Spontaneous Laughter" style="display:none;"></a>
+                    <a href="assest/clientimg/img2.JPG" data-fancybox="gallery-candid" data-caption="Natural Expressions" style="display:none;"></a>
+                </div>
+
+                <!-- 3. Cinematography Card -->
+                <div>
+                    <!-- The visible thumbnail that opens the gallery -->
+                    <a href="assest/clientimg/img8.JPG" 
+                       data-fancybox="gallery-cinema" 
+                       data-caption="Wedding Rings Cinematics"
+                       class="relative block h-[300px] md:h-[380px] rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-300">
+                        
+                        <img src="assest/clientimg/img8.JPG" 
+                             alt="Cinematography" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        
+                        <!-- Dark bottom gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Card Title -->
+                        <!-- <h3 class="absolute bottom-6 left-6 text-white font-serif text-2xl font-bold tracking-wide">Cinematography <br>& Video</h3> -->
+                    </a>
+                    
+                    <!-- Hidden gallery images grouped under "gallery-cinema" -->
+                    <a href="assest/clientimg/img14.JPG" data-fancybox="gallery-cinema" data-caption="Stage Lighting and Setup" style="display:none;"></a>
+                    <a href="assest/clientimg/img6.JPG" data-fancybox="gallery-cinema" data-caption="Epic Celebration Moments" style="display:none;"></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-gray-400 py-12 border-t border-gray-900 text-[14px]">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <!-- Left Side / Top on Mobile -->
+             <div class="flex flex-col items-center md:items-start">
+                <img src="assest/logo/white_logo.png" alt="Studio Sabi Logo" class="w-32 md:w-48 h-auto object-contain mb-2" />
+                <span>Capturing your timeless moments.</span>
+            </div>
+            
+            <!-- Right Side / Bottom on Mobile -->
+            <div class="text-center md:text-right">
+                <p>&copy; 2026 Studio Sabi. All rights reserved.</p>
+                <p class="mt-1">Designed by <a href="https://wavetechify.in" target="_blank" class="text-white hover:text-[#e60023] font-medium transition cursor-pointer tracking-wider">wavetechify.in</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fancybox JS Initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      // Initialize Fancybox when the DOM is ready
+      document.addEventListener("DOMContentLoaded", () => {
+          Fancybox.bind('[data-fancybox]', {
+            // Fancybox options
+            Carousel: {
+                infinite: true // Allows infinite scrolling through the gallery
+            },
+            Images: {
+                zoom: true // Allows users to zoom
+            }
+          });
+      });
+    </script>
+</body>
+</html>
