@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Twins Sparkle | Premium Wedding Photographer in Noida</title>
+    <meta name="description" content="Twins Sparkle offers luxury wedding photography, candid photography, cinematography, and drone shoots in Noida and outstation. Capturing your forever moments.">
+    <meta name="keywords" content="Wedding photographer in Noida, Best candid photographer, Wedding photography services near me, Premium wedding visuals, Cinematography Noida">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            darkgold: '#b5952f',
+                            blush: '#FCE7EC',
+                            cream: '#FAF9F6',
+                            black: '#1A1A1A'
+                        }
+                    },
+                    animation: {
+                        'kenburns': 'kenburns 20s ease-out infinite alternate',
+                        'marquee': 'marquee 25s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'scrollUp': 'scrollUp 30s linear infinite',
+                    },
+                    keyframes: {
+                        kenburns: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.15)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        scrollUp: {
+                            '0%': { transform: 'translateY(0)' },
+                            '100%': { transform: 'translateY(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth Vertical Sliding Animation for Portfolio */
+        .scrolling-wrapper {
+            display: flex;
+            flex-direction: column;
+            animation: scrollUp 5s linear infinite;
+        }
+        .scrolling-wrapper:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scrollUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); } /* Scrolls half the duplicated content */
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FAF9F6; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+        
+        /* Modal Styles */
+        .modal-active { overflow: hidden; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Do you travel for outstation wedding shoots?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we are based in Noida but we love traveling across India and internationally to capture your special day."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How long does it take to deliver the photos and videos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide a sneak peek within 48 hours. The complete edited gallery and cinematic films are delivered within 4 to 6 weeks."
+        }
+      }]
+    }
+    </script>
+</head>
+<body class="font-sans text-brand-black bg-brand-cream antialiased">
+
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 flex divide-x divide-gray-200">
+        <a href="tel:+919876543210" class="flex-1 py-4 text-center font-semibold text-brand-black flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            Call Now
+        </a>
+        <a href="https://wa.me/919876543210?text=Hi%20Twins%20Sparkle,%20I%20would%20like%20to%20inquire%20about%20your%20wedding%20photography%20services!" target="_blank" class="flex-1 py-4 text-center font-semibold bg-green-500 text-white flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.237a9.994 9.994 0 004.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.926-7.062A9.935 9.935 0 0012.012 2zm0 16.971c-1.504 0-2.981-.403-4.27-1.165l-.306-.182-3.176.75.764-3.099-.2-.319A8.28 8.28 0 014.025 11.98c0-4.568 3.719-8.284 8.291-8.284 2.215 0 4.298.863 5.864 2.428 1.564 1.566 2.427 3.65 2.427 5.864-.002 4.568-3.722 8.284-8.291 8.284h-.004z"></path><path d="M16.592 13.911c-.25-.125-1.487-.736-1.717-.82-.23-.084-.397-.125-.565.125-.167.25-.65.82-.797.988-.147.167-.294.188-.544.063-.25-.125-1.06-.391-2.02-1.246-.747-.665-1.251-1.488-1.398-1.738-.147-.25-.015-.386.11-.51.112-.112.25-.292.375-.438.125-.146.167-.25.25-.417.083-.167.042-.313-.02-.438-.063-.125-.565-1.365-.774-1.87-.204-.492-.41-.425-.565-.433-.146-.007-.313-.007-.48-.007-.167 0-.438.063-.667.313-.23.25-.875.854-.875 2.083 0 1.23.896 2.417 1.021 2.583.125.167 1.761 2.688 4.266 3.77.596.257 1.061.411 1.424.526.598.19 1.142.163 1.569.099.475-.072 1.487-.608 1.696-1.196.208-.588.208-1.092.146-1.196-.062-.104-.229-.167-.479-.292z"></path></svg>
+            WhatsApp
+        </a>
+    </div>
+
+    <nav class="absolute w-full z-40 top-0 py-6 px-4 md:px-12 flex justify-between items-center text-white">
+        <h1 class="font-serif text-2xl md:text-3xl font-bold tracking-wider">Twins Sparkle</h1>
+        <div class="hidden md:flex gap-8 items-center text-sm uppercase tracking-widest font-medium">
+            <a href="#portfolio" class="hover:text-brand-gold transition">Portfolio</a>
+            <a href="#services" class="hover:text-brand-gold transition">Services</a>
+            <a href="#about" class="hover:text-brand-gold transition">About</a>
+            <a href="#contact" class="bg-brand-gold text-white px-6 py-2 rounded-full hover:bg-brand-darkgold transition">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black/40 z-10"></div> <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1920&q=80" alt="Premium Wedding Couple" class="absolute inset-0 w-full h-full object-cover z-0" loading="eager">
+        
+        <div class="relative z-20 text-center px-4 max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="font-serif text-5xl md:text-7xl text-white font-bold leading-tight mb-4 shadow-sm">
+                Capturing Your <br><span class="italic text-brand-gold">Forever</span> Moments
+            </h1>
+            <p class="text-white/90 text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
+                Cinematic, candid, and deeply emotional wedding storytelling in Noida and beyond.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="px-8 py-4 bg-white text-brand-black font-semibold uppercase tracking-wider rounded-full hover:bg-brand-cream transition">View Portfolio</a>
+                <a href="https://wa.me/919876543210" target="_blank" class="px-8 py-4 bg-brand-gold text-white font-semibold uppercase tracking-wider rounded-full hover:bg-brand-darkgold transition flex items-center justify-center gap-2">
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </header> -->
+
+
+     <header class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1920&q=80" alt="Wedding Couple" class="w-full h-full object-cover animate-kenburns opacity-70">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80 z-10"></div> 
+        
+        <div class="relative z-20 text-center px-4 w-full flex flex-col items-center justify-center h-full pt-20" data-aos="fade-up" data-aos-duration="1200">
+            <p class="uppercase tracking-[0.4em] text-white/70 text-sm mb-6">Premium Wedding Visuals</p>
+            <h1 class="font-serif text-6xl md:text-8xl text-white font-medium leading-[1.1] mb-6">
+                Art of <span class="italic text-brand-gold">Love</span> <br>
+                <span class="text-outline">Captured</span>
+            </h1>
+            
+            <div class="mt-12 backdrop-blur-md bg-white/10 border border-white/20 p-6 rounded-2xl flex gap-8 items-center animate-float">
+                <div class="text-left">
+                    <p class="text-brand-gold font-serif text-3xl">350+</p>
+                    <p class="text-white/70 text-xs uppercase tracking-wider">Weddings</p>
+                </div>
+                <div class="w-px h-10 bg-white/20"></div>
+                <div class="text-left">
+                    <p class="text-brand-gold font-serif text-3xl">Award</p>
+                    <p class="text-white/70 text-xs uppercase tracking-wider">Winning</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-brand-gold text-white py-4 overflow-hidden border-y border-white/10">
+        <div class="flex whitespace-nowrap animate-marquee uppercase tracking-[0.2em] text-sm font-medium">
+            <span class="mx-8">✦ Traditional Photography</span>
+            <span class="mx-8">✦ Cinematic Films</span>
+            <span class="mx-8">✦ Pre-Wedding Shoots</span>
+            <span class="mx-8">✦ Drone Coverage</span>
+            <span class="mx-8">✦ Candid Moments</span>
+            <span class="mx-8">✦ Destination Weddings</span>
+            <span class="mx-8">✦ Traditional Photography</span>
+            <span class="mx-8">✦ Cinematic Films</span>
+            <span class="mx-8">✦ Pre-Wedding Shoots</span>
+            <span class="mx-8">✦ Drone Coverage</span>
+            <span class="mx-8">✦ Candid Moments</span>
+            <span class="mx-8">✦ Destination Weddings</span>
+        </div>
+    </div>
+
+
+
+    <section id="portfolio" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 mb-12 text-center" data-aos="fade-up">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">A Glimpse of Magic</h2>
+            <p class="text-gray-500 uppercase tracking-widest text-sm">Click any image to view full gallery</p>
+        </div>
+        
+        <div class="flex gap-4 md:gap-8 justify-center h-[600px] overflow-hidden px-4" style="mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);">
+            
+            <div class="w-1/2 md:w-1/3 scrolling-wrapper gap-4 md:gap-8 cursor-pointer" onclick="openModal()">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Wedding Ring" class="w-full rounded-lg shadow-md object-cover h-[300px]">
+                <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=600&q=80" alt="Candid Couple" class="w-full rounded-lg shadow-md object-cover h-[450px]">
+                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80" alt="Indian Wedding" class="w-full rounded-lg shadow-md object-cover h-[350px]">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Wedding Ring" class="w-full rounded-lg shadow-md object-cover h-[300px]">
+                <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=600&q=80" alt="Candid Couple" class="w-full rounded-lg shadow-md object-cover h-[450px]">
+                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80" alt="Indian Wedding" class="w-full rounded-lg shadow-md object-cover h-[350px]">
+            </div>
+
+            <div class="w-1/2 md:w-1/3 scrolling-wrapper gap-4 md:gap-8 cursor-pointer" style="animation-delay: -12s;" onclick="openModal()">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Bride Portrait" class="w-full rounded-lg shadow-md object-cover h-[450px]">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="Wedding Decor" class="w-full rounded-lg shadow-md object-cover h-[300px]">
+                <img src="https://images.unsplash.com/photo-1623528148810-e55d5bb2bb94?auto=format&fit=crop&w=600&q=80" alt="Wedding Stage" class="w-full rounded-lg shadow-md object-cover h-[400px]">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Bride Portrait" class="w-full rounded-lg shadow-md object-cover h-[450px]">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="Wedding Decor" class="w-full rounded-lg shadow-md object-cover h-[300px]">
+                <img src="https://images.unsplash.com/photo-1623528148810-e55d5bb2bb94?auto=format&fit=crop&w=600&q=80" alt="Wedding Stage" class="w-full rounded-lg shadow-md object-cover h-[400px]">
+            </div>
+            
+            <div class="hidden md:flex w-1/3 scrolling-wrapper gap-8 cursor-pointer" style="animation-delay: -5s;" onclick="openModal()">
+                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80" alt="Groom and Bride" class="w-full rounded-lg shadow-md object-cover h-[350px]">
+                <img src="https://images.unsplash.com/photo-1543854589-32fb3eb72722?auto=format&fit=crop&w=600&q=80" alt="Wedding Rituals" class="w-full rounded-lg shadow-md object-cover h-[450px]">
+                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=600&q=80" alt="Mehendi Ceremony" class="w-full rounded-lg shadow-md object-cover h-[300px]">
+                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80" alt="Groom and Bride" class="w-full rounded-lg shadow-md object-cover h-[350px]">
+                <img src="https://images.unsplash.com/photo-1543854589-32fb3eb72722?auto=format&fit=crop&w=600&q=80" alt="Wedding Rituals" class="w-full rounded-lg shadow-md object-cover h-[450px]">
+                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=600&q=80" alt="Mehendi Ceremony" class="w-full rounded-lg shadow-md object-cover h-[300px]">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-brand-blush/30">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1671531382572-40143420659b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGluZGlhJTIwd2VkZGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Photographer in action" class="rounded-2xl shadow-xl w-full h-[500px] object-cover">
+            </div>
+            <div class="w-full md:w-1/2 space-y-6" data-aos="fade-left">
+                <h3 class="uppercase tracking-[0.2em] text-brand-gold text-sm font-semibold">About Twins Sparkle</h3>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-black leading-tight">We Tell <br> Love Stories.</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Based in Noida, we are a team of passionate visual artists dedicated to freezing your most emotional and joyful moments. We believe your wedding is not just an event; it's a legacy. 
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    With a blend of fine-art portraits and raw, candid journalism, we craft a visual narrative that you will cherish for generations. Trust us to capture the sparkle of your love.
+                </p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Signature_of_John_Hancock.svg" alt="Signature" class="h-12 opacity-50 mt-4">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-4xl font-bold mb-16" data-aos="fade-up">Why Choose Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-brand-blush rounded-full flex items-center justify-center mx-auto mb-4 text-brand-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Years of Experience</h3>
+                    <p class="text-gray-500 text-sm">Hundreds of weddings captured with perfection and reliability.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-brand-blush rounded-full flex items-center justify-center mx-auto mb-4 text-brand-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Creative Storytelling</h3>
+                    <p class="text-gray-500 text-sm">Every picture speaks a thousand words about your unique love.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-brand-blush rounded-full flex items-center justify-center mx-auto mb-4 text-brand-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Candid Expertise</h3>
+                    <p class="text-gray-500 text-sm">Unposed, raw, and deeply emotional moments frozen forever.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-brand-blush rounded-full flex items-center justify-center mx-auto mb-4 text-brand-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Travel Anywhere</h3>
+                    <p class="text-gray-500 text-sm">Available across India and destination weddings globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Comprehensive photography and videography solutions to cover every aspect of your grand celebration.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Traditional Photography" class="w-full h-72 object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                        <h3 class="text-white font-serif text-2xl font-semibold">Traditional Photography</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=600&q=80" alt="Candid Photography" class="w-full h-72 object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                        <h3 class="text-white font-serif text-2xl font-semibold">Candid Photography</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80" alt="Cinematography" class="w-full h-72 object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                        <h3 class="text-white font-serif text-2xl font-semibold">Cinematography</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80" alt="Drone Shoots" class="w-full h-72 object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                        <h3 class="text-white font-serif text-2xl font-semibold">Drone Shoots</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://media.istockphoto.com/id/2127645644/photo/family-and-friends-dance-with-bride-and-groom-during-their-haldi-ceremony.webp?a=1&b=1&s=612x612&w=0&k=20&c=AxI41mRSgk6nnWUbtg5zkx61IMMmGCKWMsVYxV0Rb3g=" alt="Photobooth" class="w-full h-72 object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                        <h3 class="text-white font-serif text-2xl font-semibold">Photobooth</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" alt="Live Screening" class="w-full h-72 object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                        <h3 class="text-white font-serif text-2xl font-semibold">Live Screening</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-black text-white relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-30 mix-blend-overlay blur-sm"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl" data-aos="zoom-in">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Experience The Magic</h2>
+            <p class="text-gray-300 mb-10 text-lg">Watch our highlight reels and feel the emotions of the day.</p>
+            <button class="w-20 h-20 bg-brand-gold rounded-full flex items-center justify-center mx-auto shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:scale-110 transition duration-300">
+                <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+            </button>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">How We Work</h2>
+                <p class="text-gray-500">A seamless process for a stress-free experience.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 -z-10 -translate-y-1/2"></div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64 text-center z-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-brand-gold text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 ring-4 ring-white">1</div>
+                    <h3 class="font-bold text-lg mb-2">Consultation</h3>
+                    <p class="text-sm text-gray-500">We meet, discuss your vision, and customize a package.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64 text-center z-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-brand-gold text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 ring-4 ring-white">2</div>
+                    <h3 class="font-bold text-lg mb-2">Planning</h3>
+                    <p class="text-sm text-gray-500">We scout locations and create a detailed shot list & timeline.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64 text-center z-10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-brand-gold text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 ring-4 ring-white">3</div>
+                    <h3 class="font-bold text-lg mb-2">The Shoot</h3>
+                    <p class="text-sm text-gray-500">We capture your day unobtrusively with cinematic flair.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64 text-center z-10" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-brand-gold text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 ring-4 ring-white">4</div>
+                    <h3 class="font-bold text-lg mb-2">Delivery</h3>
+                    <p class="text-sm text-gray-500">Receive your edited, premium visual gallery and films.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-blush/30">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-16" data-aos="fade-up">Words of Love</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-left relative" data-aos="fade-up" data-aos-delay="100">
+                    <span class="absolute top-4 right-6 text-brand-gold text-6xl font-serif opacity-30">"</span>
+                    <p class="text-gray-600 italic mb-6">"Twins Sparkle made our wedding look like a movie. The candid shots are breathtaking. They made us feel so comfortable. Highly recommended in Noida!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-black">Priya & Rahul</h4>
+                            <p class="text-xs text-gray-500">Noida, UP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-left relative" data-aos="fade-up" data-aos-delay="200">
+                    <span class="absolute top-4 right-6 text-brand-gold text-6xl font-serif opacity-30">"</span>
+                    <p class="text-gray-600 italic mb-6">"The drone shots and cinematic video blew our minds. Every time we watch our video, we cry. Thank you for capturing our essence perfectly."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-black">Neha & Amit</h4>
+                            <p class="text-xs text-gray-500">Delhi Destination Wedding</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-left relative" data-aos="fade-up" data-aos-delay="300">
+                    <span class="absolute top-4 right-6 text-brand-gold text-6xl font-serif opacity-30">"</span>
+                    <p class="text-gray-600 italic mb-6">"Best wedding photographers! The album quality is premium, and their team is so professional. The photobooth was a huge hit among guests."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-black">Anjali & Vikram</h4>
+                            <p class="text-xs text-gray-500">Gurugram, HR</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-brand-gold text-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-white/30">
+            <div data-aos="zoom-in" data-aos-delay="100">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold mb-2">350+</h3>
+                <p class="text-sm uppercase tracking-wider">Weddings Covered</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold mb-2">8+</h3>
+                <p class="text-sm uppercase tracking-wider">Years Experience</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold mb-2">700+</h3>
+                <p class="text-sm uppercase tracking-wider">Happy Couples</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="400">
+                <h3 class="font-serif text-4xl md:text-5xl font-bold mb-2">15+</h3>
+                <p class="text-sm uppercase tracking-wider">Cities Travelled</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Wedding Inspiration</h2>
+                <p class="text-gray-500">Tips, trends, and real weddings.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="#" class="group block" data-aos="fade-up" data-aos-delay="100">
+                    <div class="overflow-hidden rounded-xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Poses" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <p class="text-brand-gold text-sm font-semibold mb-2">PHOTOGRAPHY TIPS</p>
+                    <h3 class="font-serif text-2xl font-bold mb-2 group-hover:text-brand-gold transition">Top 10 Candid Poses for Couples</h3>
+                    <p class="text-gray-500 text-sm">Discover how to look natural and stunning in your wedding photographs without feeling awkward.</p>
+                </a>
+                <a href="#" class="group block" data-aos="fade-up" data-aos-delay="200">
+                    <div class="overflow-hidden rounded-xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="Decor" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <p class="text-brand-gold text-sm font-semibold mb-2">WEDDING PLANNING</p>
+                    <h3 class="font-serif text-2xl font-bold mb-2 group-hover:text-brand-gold transition">Choosing the Best Lighting for Evening Weddings</h3>
+                    <p class="text-gray-500 text-sm">Why lighting is crucial for cinematic videography and how to plan it with your decorator.</p>
+                </a>
+                <a href="#" class="group block" data-aos="fade-up" data-aos-delay="300">
+                    <div class="overflow-hidden rounded-xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Outstation" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <p class="text-brand-gold text-sm font-semibold mb-2">DESTINATION</p>
+                    <h3 class="font-serif text-2xl font-bold mb-2 group-hover:text-brand-gold transition">Planning an Outstation Pre-Wedding Shoot</h3>
+                    <p class="text-gray-500 text-sm">Everything you need to know about packing, locations, and styling for a destination shoot.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-cream">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-12 text-center" data-aos="fade-up">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="border border-gray-200 bg-white rounded-lg p-4 cursor-pointer" onclick="toggleFaq('faq1')">
+                    <div class="flex justify-between items-center font-bold text-lg">
+                        <h4>Do you travel for outstation wedding shoots?</h4>
+                        <span id="icon-faq1" class="text-brand-gold">+</span>
+                    </div>
+                    <p id="faq1" class="hidden text-gray-600 mt-4 text-sm leading-relaxed">Yes, we are based in Noida but we love traveling across India and internationally to capture your special day. Travel and accommodation charges apply for outstation shoots.</p>
+                </div>
+                <div class="border border-gray-200 bg-white rounded-lg p-4 cursor-pointer" onclick="toggleFaq('faq2')">
+                    <div class="flex justify-between items-center font-bold text-lg">
+                        <h4>How long does it take to deliver photos/videos?</h4>
+                        <span id="icon-faq2" class="text-brand-gold">+</span>
+                    </div>
+                    <p id="faq2" class="hidden text-gray-600 mt-4 text-sm leading-relaxed">We provide a raw data dump or a "sneak peek" selection within 48 hours. The complete edited gallery and cinematic films are typically delivered within 4 to 6 weeks.</p>
+                </div>
+                <div class="border border-gray-200 bg-white rounded-lg p-4 cursor-pointer" onclick="toggleFaq('faq3')">
+                    <div class="flex justify-between items-center font-bold text-lg">
+                        <h4>What is your payment structure?</h4>
+                        <span id="icon-faq3" class="text-brand-gold">+</span>
+                    </div>
+                    <p id="faq3" class="hidden text-gray-600 mt-4 text-sm leading-relaxed">We require a 30% advance to block the dates, 50% on the day of the event, and the remaining 20% before the delivery of the final edited deliverables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white overflow-hidden">
+        <div class="text-center mb-10">
+            <h3 class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-2">Follow our Journey</h3>
+            <h2 class="font-serif text-3xl font-bold">@twins.sparkle</h2>
+        </div>
+        <div class="flex flex-wrap md:flex-nowrap w-full">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80" alt="Insta" class="w-1/2 md:w-1/6 h-64 object-cover hover:opacity-80 transition cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=400&q=80" alt="Insta" class="w-1/2 md:w-1/6 h-64 object-cover hover:opacity-80 transition cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=400&q=80" alt="Insta" class="w-1/2 md:w-1/6 h-64 object-cover hover:opacity-80 transition cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=400&q=80" alt="Insta" class="w-1/2 md:w-1/6 h-64 object-cover hover:opacity-80 transition cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1623528148810-e55d5bb2bb94?auto=format&fit=crop&w=400&q=80" alt="Insta" class="w-1/2 md:w-1/6 h-64 object-cover hover:opacity-80 transition cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=400&q=80" alt="Insta" class="w-1/2 md:w-1/6 h-64 object-cover hover:opacity-80 transition cursor-pointer">
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-brand-black text-white">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-16">
+            <div class="w-full md:w-1/2" data-aos="fade-right">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Let's Create <br><span class="italic text-brand-gold">History</span> Together</h2>
+                <p class="text-gray-400 mb-8">Fill out the form to instantly chat with us on WhatsApp regarding your dates and requirements.</p>
+                
+                <div class="space-y-4 text-gray-300">
+                    <p class="flex items-center gap-4"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Sector 15, Noida, Uttar Pradesh</p>
+                    <p class="flex items-center gap-4"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> +91 98765 43210</p>
+                    <p class="flex items-center gap-4"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> hello@twinssparkle.com</p>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 bg-white/5 p-8 rounded-2xl" data-aos="fade-left">
+                <form id="wa-form" onsubmit="sendToWhatsApp(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">Your Name *</label>
+                        <input type="text" id="wa-name" required class="w-full bg-transparent border-b border-gray-600 focus:border-brand-gold outline-none py-2 text-white transition">
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">Phone Number *</label>
+                            <input type="tel" id="wa-phone" required class="w-full bg-transparent border-b border-gray-600 focus:border-brand-gold outline-none py-2 text-white transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">Event Date</label>
+                            <input type="date" id="wa-date" class="w-full bg-transparent border-b border-gray-600 focus:border-brand-gold outline-none py-2 text-white transition color-scheme-dark">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">Event Location</label>
+                        <input type="text" id="wa-loc" class="w-full bg-transparent border-b border-gray-600 focus:border-brand-gold outline-none py-2 text-white transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">Message / Details</label>
+                        <textarea id="wa-msg" rows="3" class="w-full bg-transparent border-b border-gray-600 focus:border-brand-gold outline-none py-2 text-white transition resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-brand-gold hover:bg-brand-darkgold text-white font-bold rounded-lg transition duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.237a9.994 9.994 0 004.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.926-7.062A9.935 9.935 0 0012.012 2zm0 16.971c-1.504 0-2.981-.403-4.27-1.165l-.306-.182-3.176.75.764-3.099-.2-.319A8.28 8.28 0 014.025 11.98c0-4.568 3.719-8.284 8.291-8.284 2.215 0 4.298.863 5.864 2.428 1.564 1.566 2.427 3.65 2.427 5.864-.002 4.568-3.722 8.284-8.291 8.284h-.004z"></path></svg>
+                        Send Details to WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-blush text-center px-4">
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-black mb-6">Ready to Book Your Wedding Shoot?</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Dates for this wedding season are filling up fast. Get in touch to check our availability.</p>
+        <a href="#contact" class="inline-block px-10 py-4 bg-brand-black text-white font-bold uppercase tracking-wider rounded-full hover:bg-gray-800 transition">Inquire Now</a>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-gray-100 pb-24 md:pb-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h2 class="font-serif text-2xl font-bold mb-2">Twins Sparkle</h2>
+                <p class="text-sm text-gray-500">Premium Wedding Photography in Noida.</p>
+            </div>
+            <div class="flex gap-6 text-sm font-medium text-gray-600">
+                <a href="#portfolio" class="hover:text-brand-gold">Portfolio</a>
+                <a href="#services" class="hover:text-brand-gold">Services</a>
+                <a href="#about" class="hover:text-brand-gold">About</a>
+                <a href="#contact" class="hover:text-brand-gold">Contact</a>
+            </div>
+            <div class="text-sm text-gray-400">
+               Designed by <a href="https://wavetechify.in/">wavetechify.in</a> | &copy; 2026 Twins Sparkle. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div id="portfolioModal" class="fixed inset-0 bg-black/95 z-50 hidden flex-col items-center justify-center p-4">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-4xl hover:text-brand-gold transition">&times;</button>
+        <div class="max-w-4xl w-full text-center">
+            <h2 class="font-serif text-3xl text-white mb-6">Full Portfolio</h2>
+            <p class="text-gray-400 mb-8">In a real environment, this modal would open a grid, a Masonry layout, or route to a dedicated /portfolio page. Integrate a lightbox plugin like Fancybox here for a seamless experience.</p>
+            <button onclick="closeModal()" class="px-8 py-3 bg-brand-gold text-white rounded-full">Close Gallery</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({ once: true, offset: 50 });
+
+        // WhatsApp Form Submission
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('wa-name').value;
+            const phone = document.getElementById('wa-phone').value;
+            const date = document.getElementById('wa-date').value;
+            const loc = document.getElementById('wa-loc').value;
+            const msg = document.getElementById('wa-msg').value;
+            
+            // TARGET WHATSAPP NUMBER (Update this to client's actual number, format: 91XXXXXXXXXX)
+            const waNumber = "919876543210"; 
+            
+            const text = `Hi Twins Sparkle! 📸\n\nI want to inquire about a shoot.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Event Date:* ${date || 'Not decided'}\n*Location:* ${loc || 'Not decided'}\n*Message:* ${msg}\n\nPlease let me know your availability and packages!`;
+            
+            window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // FAQ Toggle Logic
+        function toggleFaq(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.innerText = "-";
+            } else {
+                el.classList.add('hidden');
+                icon.innerText = "+";
+            }
+        }
+
+        // Portfolio Modal Logic
+        function openModal() {
+            document.getElementById('portfolioModal').classList.remove('hidden');
+            document.getElementById('portfolioModal').classList.add('flex');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeModal() {
+            document.getElementById('portfolioModal').classList.add('hidden');
+            document.getElementById('portfolioModal').classList.remove('flex');
+            document.body.classList.remove('modal-active');
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-black/90', 'shadow-md', 'pb-4', 'pt-4');
+                nav.classList.remove('py-6', 'absolute');
+                nav.classList.add('fixed');
+            } else {
+                nav.classList.remove('bg-black/90', 'shadow-md', 'pb-4', 'pt-4', 'fixed');
+                nav.classList.add('py-6', 'absolute');
+            }
+        });
+    </script>
+</body>
+</html>
