@@ -100,13 +100,23 @@
             <nav
                 class="hidden flex-1 lg:flex items-center justify-end mr-6 lg:mr-10 space-x-6 xl:space-x-8 text-[14px] xl:text-[15px] font-semibold tracking-wide drop-shadow-md">
                 <a href="#" class="text-brand-red hover:text-red-500 transition-colors">Home</a>
-                <a href="#" class="text-white hover:text-gray-300 transition-colors">Beauty</a>
-                <a href="#" class="text-white hover:text-gray-300 transition-colors">Fashion Western</a>
-                <a href="#" class="text-white hover:text-gray-300 transition-colors">Fashion India</a>
-                <a href="#" class="text-white hover:text-gray-300 transition-colors">Male Fashion</a>
-                <a href="#" class="text-white hover:text-gray-300 transition-colors">Celebrity</a>
-                <a href="#" class="text-white hover:text-gray-300 transition-colors">Advertising</a>
-                <a href="#" class="text-white hover:text-gray-300 transition-colors">Contact Us</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">About</a>
+
+                <div class="dropdown relative">
+                    <button class="dropdown-toggle text-white hover:text-gray-300 transition-colors" onclick="toggleDropdown(this)">
+                        Portfolio
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu hidden absolute top-100 right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg">
+                        <a href="#" class="block px-4 py-3 text-sm font-medium text-white hover:bg-gray-700">Wedding</a>
+                        <a href="#" class="block px-4 py-3 text-sm font-medium text-white hover:bg-gray-700">Pre Wedding</a>
+                    </div>
+                </div>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Awards</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Films</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Contact</a>
             </nav>
 
             <!-- Search Icon & Mobile Hamburger Menu -->
